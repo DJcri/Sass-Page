@@ -1,0 +1,123 @@
+$primaryColor: rgb(181, 202, 172);
+
+%shadow-shared {
+    text-shadow: 2px 2px 5px rgba(black, 0.4);
+}
+
+@mixin clearfix {
+    &:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  }
+
+html {
+    background-color: $primaryColor;
+    line-height: 1.7;
+}
+
+body {
+    font-family: 'PT Sans', Arial, sans-serif;
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+  }
+
+header {
+    padding-top: 20px;
+    background-color: darken($primaryColor,30);
+    color: white;
+
+    h1 {
+        margin: 0;
+        font-weight: normal;
+        font-size: 165%;
+    }
+
+    p {
+        margin: 0;
+    }
+}
+
+/* Nav Start */
+nav ul {
+
+    margin: 0;
+    margin-top: 20px;
+    padding: 0;
+
+    list-style: none;
+
+    @include clearfix();
+
+    li {
+        float: left;
+
+        a {
+            border: $primaryColor 3px solid;
+            border-bottom: none;
+    
+            padding: 10px 15px;
+            margin-right: 15px;
+            display: block;
+            
+            color: white;
+            text-decoration: none;
+        }
+    }
+
+    a:hover {
+        background-color: $primaryColor;
+    }
+}
+
+.content-area {
+    border-top: 3px solid $primaryColor;
+    border-bottom: 3px solid $primaryColor;
+    background-color: white;
+    display: flex;
+
+    font-size: 100%;
+
+    .main-area {width: 64%;}
+
+    aside {
+        width: 36%;
+        background-color: $primaryColor;
+        color: white;
+        font-size: 85%;
+
+        p {
+            @extend %shadow-shared;
+            margin: 0;
+            padding: 10px;
+        }
+    }
+
+    .main-area, aside {
+        float: left;
+        padding: 15px;
+        box-sizing: border-box;
+
+        p {
+            text-indent: 25px;
+        }
+    }
+
+  }
+
+.container {
+    max-width: 940px;
+    margin: 0 auto;
+    padding-left: 40px;
+    padding-right: 40px;
+    box-sizing: border-box;
+  }
+
+footer {
+    @extend %shadow-shared;
+    color: white;
+    text-align: center;
+    font-size: 85%;
+}

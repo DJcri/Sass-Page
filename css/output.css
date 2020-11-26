@@ -1,0 +1,102 @@
+footer, .content-area aside p {
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+html {
+  background-color: #b5caac;
+  line-height: 1.7;
+}
+
+body {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  padding-top: 20px;
+  background-color: #658756;
+  color: white;
+}
+header h1 {
+  margin: 0;
+  font-weight: normal;
+  font-size: 165%;
+}
+header p {
+  margin: 0;
+}
+
+/* Nav Start */
+nav ul {
+  margin: 0;
+  margin-top: 20px;
+  padding: 0;
+  list-style: none;
+}
+nav ul:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+nav ul li {
+  float: left;
+}
+nav ul li a {
+  border: #b5caac 3px solid;
+  border-bottom: none;
+  padding: 10px 15px;
+  margin-right: 15px;
+  display: block;
+  color: white;
+  text-decoration: none;
+}
+nav ul a:hover {
+  background-color: #b5caac;
+}
+
+.content-area {
+  border-top: 3px solid #b5caac;
+  border-bottom: 3px solid #b5caac;
+  background-color: white;
+  display: flex;
+  font-size: 100%;
+}
+.content-area .main-area {
+  width: 64%;
+}
+.content-area aside {
+  width: 36%;
+  background-color: #b5caac;
+  color: white;
+  font-size: 85%;
+}
+.content-area aside p {
+  margin: 0;
+  padding: 10px;
+}
+.content-area .main-area, .content-area aside {
+  float: left;
+  padding: 15px;
+  box-sizing: border-box;
+}
+.content-area .main-area p, .content-area aside p {
+  text-indent: 25px;
+}
+
+.container {
+  max-width: 940px;
+  margin: 0 auto;
+  padding-left: 40px;
+  padding-right: 40px;
+  box-sizing: border-box;
+}
+
+footer {
+  color: white;
+  text-align: center;
+  font-size: 85%;
+}
+
+/*# sourceMappingURL=output.css.map */
